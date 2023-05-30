@@ -10,16 +10,8 @@
 ------------------------------------------------------------------------------
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  {
-    command = "black",
-    extra_args = { "--line-length", "79" }, -- should be in project config
-    filetypes = { "python" }
-  },
-  {
-    name = "isort",
-    extra_args = { "--multi-line", "3", "--profile", "black" }, -- what's this
-    filetypes = { "python" }
-  },
+  { command = "isort", filetypes = { "python" } },
+  { command = "black", filetypes = { "python" } },
 }
 
 ------------------------------------------------------------------------------
