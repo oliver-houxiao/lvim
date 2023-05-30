@@ -7,8 +7,16 @@
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { name = "isort",    filetypes = { "python" } },
+  {
+    command = "black",
+    extra_args = { "--line-length", "79" },
+    filetypes = { "python" }
+  },
+  {
+    name = "isort",
+    extra_args = { "--multi-line", "3", "--profile", "black" },
+    filetypes = { "python" }
+  },
 }
 
 local linters = require "lvim.lsp.null-ls.linters"

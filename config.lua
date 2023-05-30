@@ -8,11 +8,38 @@
 ------------------------------------------------------------------------------
 -- General
 ------------------------------------------------------------------------------
+-- Format on save
+lvim.format_on_save.enabled = true
+lvim.format_on_save.pattern = {
+  "*.py",
+  "*.lua",
+}
+-- Appearance
 lvim.colorscheme = "OceanicNext"
+
+------------------------------------------------------------------------------
+-- Generic LSP
+------------------------------------------------------------------------------
+-- Make sure server will always be installed even if the server is in
+-- `skipped_servers` list
+lvim.lsp.installer.setup.ensure_installed = {
+  -- Python
+  "pyright",
+  -- Lua
+  "lua_ls",
+  -- JSON
+  "jsonls",
+}
+
+-- Automatic installation of servers
+lvim.lsp.installer.setup.automatic_installation = true
 
 ------------------------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------------------------
 lvim.plugins = {
+  -- Utilities
+  { "Exafunction/codeium.vim" },
+  -- Theme
   { "mhartington/oceanic-next" },
 }
