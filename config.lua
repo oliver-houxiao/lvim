@@ -25,6 +25,8 @@ lvim.colorscheme = "OceanicNext"
 lvim.lsp.installer.setup.ensure_installed = {
   -- Python
   "pyright",
+  -- Bash
+  "bashls",
   -- Lua
   "lua_ls",
   -- JSON
