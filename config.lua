@@ -42,6 +42,11 @@ lvim.lsp.installer.setup.automatic_installation = true
 lvim.plugins = {
   -- Utilities
   { "Exafunction/codeium.vim" },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
   -- Theme
   { "mhartington/oceanic-next" },
 }
