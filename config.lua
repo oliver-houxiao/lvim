@@ -47,6 +47,9 @@ lvim.plugins = {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
   },
+  { "mechatroner/rainbow_csv" },
+  { "AckslD/swenv.nvim" },
+  { "stevearc/dressing.nvim" },
   -- Theme
   { "mhartington/oceanic-next" },
 }
