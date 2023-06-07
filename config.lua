@@ -40,14 +40,17 @@ lvim.lsp.installer.setup.automatic_installation = true
 -- Plugins
 ------------------------------------------------------------------------------
 lvim.plugins = {
-  -- Utilities
+  -- AI completion
   { "Exafunction/codeium.vim" },
+  -- Annotation
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
   },
+  -- CSV highlighting
   { "mechatroner/rainbow_csv" },
+  -- Python env switching
   { "AckslD/swenv.nvim" },
   { "stevearc/dressing.nvim" },
   -- Theme
