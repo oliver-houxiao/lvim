@@ -24,7 +24,7 @@ lvim.colorscheme = "OceanicNext"
 -- `skipped_servers` list
 lvim.lsp.installer.setup.ensure_installed = {
   -- Python
-  "pyright",
+  "pylsp",
   -- Bash
   "bashls",
   -- Lua
@@ -35,6 +35,17 @@ lvim.lsp.installer.setup.ensure_installed = {
 
 -- Automatic installation of servers
 lvim.lsp.installer.setup.automatic_installation = true
+
+-- Add LSPs to `skipped_servers` list
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
+
+-- Remove LSPs from `skipped_servers` list
+lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(
+  function(server)
+    return server ~= "pylsp"
+  end,
+  lvim.lsp.automatic_configuration.skipped_servers
+)
 
 ------------------------------------------------------------------------------
 -- Plugins
