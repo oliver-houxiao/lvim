@@ -13,6 +13,12 @@ lvim.format_on_save.enabled = true
 lvim.format_on_save.pattern = {
   "*.py",
   "*.lua",
+  "*.js",
+  "*.c",
+  "*.h",
+  "*.cpp",
+  "*.hpp",
+  "*.sh",
 }
 -- Appearance
 lvim.colorscheme = "OceanicNext"
@@ -31,6 +37,12 @@ lvim.lsp.installer.setup.ensure_installed = {
   "lua_ls",
   -- JSON
   "jsonls",
+  -- OpenFOAM
+  "foam_ls",
+  -- VIM
+  "vimls",
+  -- C/C++
+  "clangd",
 }
 
 -- Automatic installation of servers
