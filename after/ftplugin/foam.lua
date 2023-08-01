@@ -8,7 +8,7 @@
 ------------------------------------------------------------------------------
 -- Fomatters
 ------------------------------------------------------------------------------
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  { command = "clang-format", filetypes = { "foam" } },
-}
+-- local formatters = require "lvim.lsp.null-ls.formatters"
+-- formatters.setup {
+--   { command = "clang-format", filetypes = { "foam" } },
+-- }

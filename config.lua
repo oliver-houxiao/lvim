@@ -8,18 +8,8 @@
 ------------------------------------------------------------------------------
 -- General
 ------------------------------------------------------------------------------
--- Format on save
+-- Format all filetypes on save
 lvim.format_on_save.enabled = true
-lvim.format_on_save.pattern = {
-  "*.py",
-  "*.lua",
-  "*.js",
-  "*.c",
-  "*.h",
-  "*.cpp",
-  "*.hpp",
-  "*.sh",
-}
 -- Appearance
 lvim.colorscheme = "OceanicNext"
 
