@@ -1,45 +1,50 @@
 #!/usr/bin/lua
 -- Author        : Xiao Hou
--- Email         : contact@librefluids.com
+-- Email         : hou.xiao@pm.me
 -- Created       : 2023-05-29
--- Last Modified : 2023-08-01
+-- Last Modified : 2024-04-07
 -- SPDX-License-Identifier: Apache-2.0
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- General
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Format all filetypes on save
 lvim.format_on_save.enabled = true
 -- Appearance
 lvim.colorscheme = "OceanicNext"
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Generic LSP
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Make sure server will always be installed even if the server is in
 -- `skipped_servers` list
 lvim.lsp.installer.setup.ensure_installed = {
-  -- Python
-  "pylsp",
   -- Bash
   "bashls",
-  -- Lua
-  "lua_ls",
-  -- JSON
-  "jsonls",
-  -- OpenFOAM
-  "foam_ls",
-  -- VIM
-  "vimls",
   -- C/C++
   "clangd",
+  -- Fortran
+  "fortls",
+  -- JSON
+  "jsonls",
+  -- Julia
+  "julials",
+  -- Lua
+  "lua_ls",
+  -- OpenFOAM
+  "foam_ls",
+  -- Python
+  "pylsp",
+  -- VIM
+  "vimls",
 }
 
 -- Automatic installation of servers
 lvim.lsp.installer.setup.automatic_installation = true
 
 -- Add LSPs to `skipped_servers` list
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers,
+  { "pyright" })
 
 -- Remove LSPs from `skipped_servers` list
 lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(
@@ -49,9 +54,9 @@ lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(
   lvim.lsp.automatic_configuration.skipped_servers
 )
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Plugins
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 lvim.plugins = {
   -- AI completion
   { "Exafunction/codeium.vim" },
@@ -63,6 +68,8 @@ lvim.plugins = {
   },
   -- CSV highlighting
   { "mechatroner/rainbow_csv" },
+  -- Julia LaTeX
+  { "JuliaEditorSupport/julia-vim" },
   -- Python env switching
   { "AckslD/swenv.nvim" },
   { "stevearc/dressing.nvim" },
