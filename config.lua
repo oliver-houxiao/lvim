@@ -11,7 +11,7 @@
 -- Format all filetypes on save
 lvim.format_on_save.enabled = true
 -- Appearance
-lvim.colorscheme = "OceanicNext"
+lvim.colorscheme = "catppuccin-mocha"
 
 -------------------------------------------------------------------------------
 -- Generic LSP
@@ -69,10 +69,11 @@ lvim.plugins = {
   -- CSV highlighting
   { "mechatroner/rainbow_csv" },
   -- Julia LaTeX
-  { "JuliaEditorSupport/julia-vim" },
+  -- { "JuliaEditorSupport/julia-vim" },
   -- Python env switching
   { "AckslD/swenv.nvim" },
   { "stevearc/dressing.nvim" },
   -- Theme
+  { "catppuccin/nvim" },
   { "mhartington/oceanic-next" },
 }
