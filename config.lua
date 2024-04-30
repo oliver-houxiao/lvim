@@ -75,5 +75,4 @@ lvim.plugins = {
   { "stevearc/dressing.nvim" },
   -- Theme
   { "catppuccin/nvim" },
-  { "mhartington/oceanic-next" },
 }
